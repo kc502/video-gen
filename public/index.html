@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Video Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gemini Video Generator</h1>
+        <div class="form-group">
+            <label for="apiKey">Gemini API Key:</label>
+            <input type="text" id="apiKey" placeholder="API Key ကိုဒီမှာထည့်ပါ">
+        </div>
+        <div class="form-group">
+            <label for="prompt">ဗီဒီယိုအတွက် အကြောင်းအရာ ရိုက်ထည့်ပါ:</label>
+            <textarea id="prompt" placeholder="ဥပမာ: ပန်းခြံထဲက ကြောင်တစ်ကောင်" rows="4"></textarea>
+        </div>
+        <button id="generateBtn">ဗီဒီယို ဖန်တီးပါ</button>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>ဗီဒီယို ဖန်တီးနေသည်...</p>
+        </div>
+        <div id="result" class="hidden">
+            <h3>ထုတ်ပေးလိုက်တဲ့ ဗီဒီယို</h3>
+            <p id="enhanced-prompt"></p>
+            <video id="video-output" controls></video>
+            <a id="download-btn" class="hidden" download>Download Video</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
